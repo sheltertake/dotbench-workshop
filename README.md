@@ -1,3 +1,2 @@
 # dotbench-workshop
 
-gitflow init
