@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Arithmetic2.Benchmarks</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.11.3, OS=Windows 10.0.17134.950 (1803/April2018Update/Redstone4)
+Intel Core i7-6600U CPU 2.60GHz (Skylake), 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.203
+  [Host]     : .NET Core 2.0.9 (CoreCLR 4.6.26614.01, CoreFX 4.6.26614.01), 64bit RyuJIT
+  .NETCore20 : .NET Core 2.0.9 (CoreCLR 4.6.26614.01, CoreFX 4.6.26614.01), 64bit RyuJIT
+  .NETCore21 : .NET Core 2.1.12 (CoreCLR 4.6.27817.01, CoreFX 4.6.27818.01), 64bit RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th> Job</th><th>Toolchain</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>Positive</td><td>.NETCore20</td><td>.NET Core 2.0</td><td>0.4901 ns</td><td>0.0514 ns</td><td>0.0703 ns</td>
+</tr><tr><td>Negative</td><td>.NETCore20</td><td>.NET Core 2.0</td><td>1.5344 ns</td><td>0.0745 ns</td><td>0.0660 ns</td>
+</tr><tr><td>Positive</td><td>.NETCore21</td><td>.NET Core 2.1</td><td>0.2931 ns</td><td>0.0224 ns</td><td>0.0199 ns</td>
+</tr><tr><td>Negative</td><td>.NETCore21</td><td>.NET Core 2.1</td><td>0.1640 ns</td><td>0.0400 ns</td><td>0.0354 ns</td>
+</tr></tbody></table>
+</body>
+</html>
