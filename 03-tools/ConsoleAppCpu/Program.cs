@@ -6,7 +6,7 @@ namespace ConsoleAppCpu
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!");
             IsPrime(2147483647);
         }
 
