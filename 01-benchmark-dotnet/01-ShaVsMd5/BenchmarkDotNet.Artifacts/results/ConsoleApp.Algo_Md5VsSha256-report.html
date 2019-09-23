@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>ConsoleApp.Algo_Md5VsSha256-20190915-060636</title>
+<title>ConsoleApp.Algo_Md5VsSha256-20190923-064317</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -15,17 +15,17 @@
 <pre><code>
 BenchmarkDotNet=v0.11.5, OS=Windows 10.0.18362
 Intel Core i5-5200U CPU 2.20GHz (Broadwell), 1 CPU, 4 logical and 2 physical cores
-.NET Core SDK=2.2.301
-  [Host]     : .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
-  DefaultJob : .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+.NET Core SDK=3.0.100-rc1-014190
+  [Host]     : .NET Core 2.2.7 (CoreCLR 4.6.28008.02, CoreFX 4.6.28008.03), 64bit RyuJIT
+  DefaultJob : .NET Core 2.2.7 (CoreCLR 4.6.28008.02, CoreFX 4.6.28008.03), 64bit RyuJIT
 </code></pre>
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th>
+<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th>
 </tr>
-</thead><tbody><tr><td>Md5</td><td>27.03 us</td><td>0.4380 us</td><td>0.3883 us</td><td>1.00</td><td>0.00</td>
-</tr><tr><td>Sha256</td><td>60.36 us</td><td>1.2022 us</td><td>1.6049 us</td><td>2.23</td><td>0.06</td>
+</thead><tbody><tr><td>Md5</td><td>26.93 us</td><td>0.4479 us</td><td>0.4189 us</td><td>26.72 us</td><td>1.00</td><td>0.00</td>
+</tr><tr><td>Sha256</td><td>61.17 us</td><td>1.5082 us</td><td>4.2539 us</td><td>59.28 us</td><td>2.34</td><td>0.19</td>
 </tr></tbody></table>
 </body>
 </html>
