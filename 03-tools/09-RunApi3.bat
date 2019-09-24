@@ -1,0 +1,1 @@
+dotnet WebApi3\bin\Release\netcoreapp3.0\publish\WebApi3.dll
