@@ -1,0 +1,13 @@
+TOOLS
+
+DotTrace
+DotMemory
+BenchmarkDotnet
+
+BENCHMARK 
+
+Intro
+Pitfalls
+BenchmarkDotnet
+CPU
+Memory
