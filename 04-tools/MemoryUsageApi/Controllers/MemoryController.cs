@@ -9,44 +9,59 @@ namespace MemoryUsageApi.Controllers
     public class MemoryController : ControllerBase
     {
         private const int MEGA = 1024 * 1024;
+        private const int KILO = 1024;
         public static byte[] MyByteArray = new byte[0];
         public static Dictionary<int, byte[]> MyDictionary = new Dictionary<int, byte[]>();
 
         [HttpGet]
-        [Route("short/{mb}")]
-        public ActionResult<object> Short(int mb)
+        [Route("gen0/{NKB}")]
+        public ActionResult<object> Gen0(int NKB)
         {
-            var data = new byte[mb * MEGA];
+            var data = new byte[NKB * KILO];
             return new
             {
-                MyDictionary = MyDictionary.Sum(x => x.Value.Length / MEGA),
-                MyByteArray = (MyByteArray.Length / MEGA),
-                Short = data.Length / MEGA
+                MyDictionary = MyDictionary.Sum(x => x.Value.Length / MEGA)+ "Mb",
+                MyByteArray = (MyByteArray.Length / MEGA) + "Mb",
+                Volatile = data.Length / KILO + "Kb"
             };
 
         }
 
         [HttpGet]
-        [Route("static/{mb}")]
-        public ActionResult<object> S(int mb)
+        [Route("loh/{NMB}")]
+        public ActionResult<object> Loh(int NMB)
         {
-            MyByteArray = new byte[mb * MEGA];
+            var data = new byte[NMB * MEGA];
             return new
             {
-                MyDictionary = MyDictionary.Sum(x => x.Value.Length / MEGA),
-                MyByteArray = (MyByteArray.Length / MEGA)
+                MyDictionary = MyDictionary.Sum(x => x.Value.Length / MEGA) + "Mb",
+                MyByteArray = (MyByteArray.Length / MEGA) + "Mb",
+                Volatile = data.Length / MEGA + "Mb",
+            };
+
+        }
+
+        [HttpGet]
+        [Route("loh/s/{NMB}")]
+        public ActionResult<object> LohStatic(int NMB)
+        {
+            MyByteArray = new byte[NMB * MEGA];
+            return new
+            {
+                MyDictionary = MyDictionary.Sum(x => x.Value.Length / MEGA) + "Mb",
+                MyByteArray = (MyByteArray.Length / MEGA) + "Mb",
             };
         }
 
         [HttpGet]
-        [Route("dictionary/{key}/{mb}")]
-        public ActionResult<object> D(int key, int mb)
+        [Route("loh/d/{key}/{NMB}")]
+        public ActionResult<object> D(int key, int NMB)
         {
-            MyDictionary[key] = new byte[mb * MEGA];
+            MyDictionary[key] = new byte[NMB * MEGA];
             return new
             {
-                MyDictionary = MyDictionary.Sum(x => x.Value.Length / MEGA),
-                MyByteArray = (MyByteArray.Length / MEGA)
+                MyDictionary = MyDictionary.Sum(x => x.Value.Length / MEGA) + "Mb",
+                MyByteArray = (MyByteArray.Length / MEGA) + "Mb",
             };
         }
     }
