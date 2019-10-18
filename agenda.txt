@@ -1,4 +1,4 @@
-TOOLS
+TOOLS (13)
 
 DotTrace
 DotMemory
@@ -6,10 +6,15 @@ BenchmarkDotnet
 
 BENCHMARK 
 
-Intro
-Pitfalls
-BenchmarkDotnet
-CPU
-Memory
+Intro (35)
+BenchmarkDotnet (14)
+Pitfalls (23)
+CPU (13)
+Memory (11)
 
-TOOLS
+TOOLS (?)
+
+MEMORY (12...)
+
+
+121
