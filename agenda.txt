@@ -1,4 +1,4 @@
-TOOLS (13)
+TOOLS (13) - 1700:1713
 
 DotTrace
 DotMemory
@@ -6,15 +6,15 @@ BenchmarkDotnet
 
 BENCHMARK 
 
-Intro (35)
-BenchmarkDotnet (14)
-Pitfalls (23)
-CPU (13)
-Memory (11)
+Intro (35) - 1713-1748
+BenchmarkDotnet (14) - 1748-1802
+Pitfalls (23) - 1802-1825
+CPU (13) - 1825-1838
+Memory (11) - 1838-1849
 
 TOOLS (?)
 
-MEMORY (12...)
+MEMORY (12...) - 1849-1900
 
 
 121
